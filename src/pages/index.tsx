@@ -44,7 +44,7 @@ export default function Home(): JSX.Element {
   // );
   return(
     <div style={{height:'100vh', display:'flex', justifyContent:'center', alignItems:'center', backgroundColor:'black', color:'white'}}>
-      <h1 style={{fontSize:'150px', marginBottom:'15vh'}}>{siteConfig.title}</h1>
+      <h1 style={{fontSize:'10vw', marginBottom:'15vh'}}>{siteConfig.title}</h1>
     </div>
   );
 }
