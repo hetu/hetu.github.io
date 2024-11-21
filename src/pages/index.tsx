@@ -43,8 +43,8 @@ export default function Home(): JSX.Element {
   //   </Layout>
   // );
   return(
-    <div style={{height:'100vh', display:'flex', justifyContent:'center', alignItems:'center', backgroundColor:'black', color:'white'}}>
-      <h1 style={{fontSize:'10vw', marginBottom:'15vh'}}>{siteConfig.title}</h1>
+    <div className={styles.backdot}>
+      <h1 className={styles.logotext}>{siteConfig.title}</h1>
     </div>
   );
 }

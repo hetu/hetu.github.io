@@ -27,3 +27,68 @@
   align-items: center;
   justify-content: center;
 }
+
+@property --rotate {
+  syntax: "<angle>";
+  initial-value: 0deg;
+  inherits: false;
+}
+
+.backdot {
+  border: double calc(var(--border) * 1px) transparent;
+  border-radius: calc(var(--radius) * 1.1px);
+  background-image: 
+  radial-gradient(
+    #53515010 1px,
+    transparent 0
+  ),
+  radial-gradient(#53515010 2px, #25282a 0),
+  conic-gradient(
+  from var(--rotate) at 50% 70%,
+    hsl(0 0% 98% / .1) 0deg,
+    #eec32d 72deg,
+    #ec4b4b 144deg,
+    #709ab9 216deg,
+    #4dffbf 288deg,
+    hsl(0 0% 98% / .1) 1turn
+  );
+  background-size: 5vmin 5vmin, 5vmin 5vmin, 100% 100%;
+  background-origin: border-box;
+  background-clip: padding-box, padding-box, border-box;
+  animation: spin 5s linear infinite;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+}
+
+@keyframes spin {
+  0% {
+    --rotate: 0deg;
+  }
+  100% {
+    --rotate: 360deg;
+  }
+}
+
+.logotext {
+  font-size: 10vw;
+  margin-bottom: 15vh;
+  animation: fadeInOut 15s infinite;
+}
+
+@keyframes fadeInOut {
+  0% {
+    color: gray;
+    opacity: 0;
+  }
+  40% {
+    color: white;
+    opacity: 1;
+  }
+  100% {
+    color: gray;
+    opacity: 0;
+  }
+}
